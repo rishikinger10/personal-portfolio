@@ -6,7 +6,7 @@ Run it again anytime, it wipes and reinserts (except messages).
 from database import get_conn, init_db
 
 profile = {
-    "full_name": "Rishi Kingr",
+    "full_name": "Rishi Kinger",
     "headline": "Electronics & Instrumentation Engineer",
     "tagline": "Embedded Systems · Computer Vision · Linux Internals",
     "email": "rishikinger10@gmail.com",
