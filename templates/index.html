@@ -1,1 +1,99 @@
-<!DOCTYPE html><html><body><h1>Rishi Kinger</h1><p>wip</p></body></html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rishi Kinger — Embedded &amp; Vision</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;800&family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+
+  <!-- animated pcb traces, sits behind everything -->
+  <canvas id="pcb-canvas"></canvas>
+
+  <nav class="topbar">
+    <div class="logo mono">rk<span class="blink">_</span></div>
+    <div class="nav-links">
+      <a href="#about">about</a>
+      <a href="#skills">skills</a>
+      <a href="#projects">projects</a>
+      <a href="#experience">experience</a>
+      <a href="#contact" class="nav-cta">contact</a>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <div class="hero-text">
+      <p class="mono kicker">// hello world, I'm</p>
+      <h1 id="hero-name">&nbsp;</h1>
+      <h2 class="mono" id="typed-role"><span id="typed-text"></span><span class="cursor">▌</span></h2>
+      <p class="hero-sub" id="hero-tagline"></p>
+      <div class="hero-btns">
+        <a class="btn primary" href="#projects">see my work</a>
+        <a class="btn ghost" href="#contact">get in touch</a>
+      </div>
+      <div class="hero-meta mono" id="hero-meta"></div>
+    </div>
+
+    <div class="hero-photo">
+      <div class="photo-ring">
+        <img src="/static/img/rishi.jpg" alt="Rishi Kinger">
+      </div>
+      <div class="photo-badge mono">STATUS: <span class="ok">ONLINE</span></div>
+    </div>
+  </header>
+
+  <main>
+    <section id="about" class="panel">
+      <h3 class="section-title mono"><span class="hash">01.</span> about</h3>
+      <div class="about-grid">
+        <p id="about-text"></p>
+        <div class="edu-card">
+          <div class="mono edu-label">EDUCATION</div>
+          <p id="edu-text"></p>
+          <div class="cgpa mono">CGPA <span id="cgpa-val"></span></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills" class="panel">
+      <h3 class="section-title mono"><span class="hash">02.</span> skills</h3>
+      <div class="skills-grid" id="skills-grid"></div>
+    </section>
+
+    <section id="projects" class="panel">
+      <h3 class="section-title mono"><span class="hash">03.</span> projects</h3>
+      <div class="projects-grid" id="projects-grid"></div>
+    </section>
+
+    <section id="experience" class="panel">
+      <h3 class="section-title mono"><span class="hash">04.</span> experience</h3>
+      <div class="timeline" id="exp-timeline"></div>
+    </section>
+
+    <section id="contact" class="panel">
+      <h3 class="section-title mono"><span class="hash">05.</span> contact</h3>
+      <p class="contact-blurb">Whether it's embedded work, an internship, or just talking shop about kernels and cameras, my inbox is open.</p>
+      <form id="contact-form" autocomplete="off">
+        <div class="form-row">
+          <input type="text" name="name" placeholder="your name">
+          <input type="email" name="email" placeholder="your email *" required>
+        </div>
+        <textarea name="message" rows="5" placeholder="your message *" required></textarea>
+        <button type="submit" class="btn primary">transmit &gt;&gt;</button>
+        <span id="form-status" class="mono"></span>
+      </form>
+    </section>
+  </main>
+
+  <footer class="mono">
+    <span>built with flask + sqlite + too much coffee</span>
+    <span id="footer-contact"></span>
+  </footer>
+
+  <script src="/static/js/circuit_bg.js"></script>
+  <script src="/static/js/main.js"></script>
+</body>
+</html>

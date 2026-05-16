@@ -3,7 +3,6 @@ from database import get_conn, init_db
 import os
 
 app = Flask(__name__)
-print('debug')
 
 # make sure the db exists even on a fresh clone
 init_db()
